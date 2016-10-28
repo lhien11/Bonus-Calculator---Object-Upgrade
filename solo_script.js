@@ -10,11 +10,17 @@ var arrayJem = ["Jem", "62347", "63500", 4];
 var arrayBoo = ["Boo", "11435", "54000", 3];
 var arrayScout = ["Scout", "6243", "74750", 5];
 
-var atticus = new Person(arrayAtticus);
-var jem = new Person(arrayJem);
-var boo = new Person(arrayBoo);
-var scout = new Person(arrayScout);
-var employeeList = [atticus, jem, boo, scout];
+
+// var atticus = new Person(arrayAtticus);
+// var jem = new Person(arrayJem);
+// var boo = new Person(arrayBoo);
+// var scout = new Person(arrayScout);
+var employeeList = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
+for(var i = 0; i < employeeList.length; i++){
+  employeeList[i] = new Person(employeeList[i]);
+  console.log(employeeList[i]);
+}
+
 //Create variables used to write to the DOM
 var newEl, newText, position;
 //Capture the position of insertion into the DOM
